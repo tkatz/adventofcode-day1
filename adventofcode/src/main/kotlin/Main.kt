@@ -25,7 +25,11 @@ fun parseSnacks(fileName: String) {
         }
     }
     elves.sortByDescending { it.totalAmount }
-    println(elves)
+    val topThree = elves.subList(0, 3)
+    var topThreeCaloriesSum = 0;
+    topThree.forEach { topThreeCaloriesSum+= it.totalAmount }
+
+    println(topThreeCaloriesSum)
 }
 
 
